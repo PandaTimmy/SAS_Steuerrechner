@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Steuerrechner</title>
+
+    <link rel="stylesheet" href="css/css.css">
+    <script
+        src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+        crossorigin="anonymous">
+    </script>
+    <script src="js/printThis.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/steuerrechner.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+</head>
+
+
+<body style="display: flex;" id="body">
+
+<div class="topline" style="z-index: 999999; min-width: 100vw; min-height: 1px; position: fixed; background-color: #dbdbdb;"></div>
+
+<img src='images/menu.svg' class="sidemenu-button" style='max-width: 28px; cursor: pointer; margin-left: 19px; margin-top: 5px; position: fixed; z-index: 3000;' onclick='openCloseSidemenu("sidemenu-1")'>
+
+
+
+<div id="sidemenu-1" class="main sidemenu">
+
+<div class="scroll static sidemenu-border">
+
+
+    <div class="karten-abstand-1"></div>
+    <div class="karten-abstand-1"></div>
+
+    <div class="karten-überschrift-0" style="white-space: nowrap;">Menü</div>
+
+    <div class="karten-abstand-1"></div>
+
+    <div class="karte none">
+        <div class="titel-1 link2" onclick='weiterleiten("index.html")' style="cursor: pointer;" 
+            ><span style="width: 100%; white-space: nowrap;" >
+                Home
+            </span></div>
+    </div>
+    
+    <div class="karte selected">
+        <div class="titel-1 link2"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction=''
+                data-statusfunction=''
+                data-statusid=''
+            ><span style="width: 100%; white-space: nowrap;" onclick=''>
+                Steuerrechner
+            </span></div>
+    </div>
+
+    <div class="karte none">
+        <div class="titel-1 link2" onclick='weiterleiten("steuern-erklärt.html")' style="cursor: pointer;" 
+            ><span style="width: 100%; white-space: nowrap;" >
+                Steuern Erklärt
+            </span></div>
+    </div>
+
+    <div style="margin: 20px; margin-left: 20px; margin-right: 20px; background-color: #dbdbdb; height: 1px;"></div>
+
+    <div class="karte none">
+        <div class="titel-1 link2" onclick='weiterleiten("über-uns.html")' style="cursor: pointer;" 
+            ><span style="width: 100%; white-space: nowrap;" >
+                Über uns
+            </span></div>
+    </div>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="main">
+
+
+<div class="navigation" style="display: block; overflow: hidden;">
+    <span>Steuerrechner</span>
+</div>
+
+<div class="scroll">
+
+
+
+
+
+<div class="karten-abstand-1"></div>
+
+<div class="karten-überschrift-0">Steuerrechner</div>
+
+<div class="karten-abstand-1"></div>
+
+<div class="karte">
+    <ul>
+        <div class="karten-abstand-3"></div>
+        <li>
+            <div class="titel-2"
+            ><span style="width: 100%">
+                Wichtige Informationen
+            </span></div>
+        </li>
+
+        <div class="karten-abstand-2"></div>
+
+        <div class="text-1">Im folgendem Formular können Sie die Steuern Ihrer Angestellten, Ihres Unternehmens sowie Ihre eigenen Steuern berechnen.<br><br>
+        Das Steuerformular können Sie danach an das Finanzamt weiterleiten.
+        </div>
+
+        <div class="karten-abstand-1"></div>
+
+        <li>
+            <div class="titel-2"
+            ><span style="width: 100%">
+                Symbole
+            </span></div>
+        </li>
+
+        <div class="karten-abstand-3"></div>
+
+        <ul>
+            <li>
+                <div class="text-1">
+                    <img src='images/info.svg' style='width: 24px; margin-right: 5px;'> Weitere Informationen
+                </div>
+            </li>
+            <div class="karten-abstand-3"></div>
+            <li>
+                <div class="text-1">
+                    <img src='images/warning.svg' style='width: 24px; margin-right: 5px;'> Pflichtfeld / Achtung
+                </div>
+            </li>
+            <div class="karten-abstand-3"></div>
+            <li>
+                <div class="text-1">
+                    <img src='images/wrong.svg' style='width: 24px; margin-right: 5px;'> Feld falsch ausgefüllt
+                </div>
+            </li>
+            <div class="karten-abstand-3"></div>
+            <li>
+                <div class="text-1">
+                    <img src='images/remove.svg' style='width: 24px; margin-right: 5px;'> Feld löschen
+                </div>
+            </li>
+            <div class="karten-abstand-3"></div>
+            <li>
+                <div class="text-1">
+                    <img src='images/correct.svg' style='width: 24px; margin-right: 5px;'> Feld korrekt ausgefüllt
+                </div>
+            </li>
+        </ul>
+        
+        <div class="karten-abstand-3"></div>
+    </ul>
+</div>
+
+<div class="karten-abstand-1"></div>
+<div class="karten-abstand-1"></div>
+
+<div class="karte">
+
+    <div class="karten-abstand-3"></div>
+
+    <div class="titel-2 info status"
+        data-infofunction='infoAlert("Bitte füllen Sie dieses Formular über Ihren Angestellten aus.\n\nBitte stellen Sie sicher, dass alle Felder korrekt ausgefüllt wurden.\n\nDrücken Sie das Minus-Symbol, um das Formular zu löschen.")'
+        data-statusfunction='infoAlert("Bitte füllen Sie dieses Formular über Ihren Angestellten aus.\n\nBitte stellen Sie sicher, dass alle Felder korrekt ausgefüllt wurden.\n\nDrücken Sie das Minus-Symbol, um das Formular zu löschen.")'
+        data-statusid='formular-allgemein'
+        data-statusdefault='warning'
+    ><span style="width: 100%">
+        Allgemein
+    </span></div>
+
+    <div class="karten-abstand-2"></div>
+
+    <div class="karten-überschrift-2">PERSÖNLICHE INFORMATIONEN</div>
+
+    <div class="karte inner">
+        <ul>
+            <li>
+                <div class="status"
+                    data-statusfunction='infoAlert("Bitte geben Sie Ihren Vornamen ein")'
+                    data-statusid='status-vorname'
+                    data-statusfamilie='status-allgemein'
+                    data-statusdefault='warning'
+                ><input autocomplete="given-name" id="input-vorname" class="input-1" style="width: 100%; margin-right: 5px;"
+                    placeholder="Vorname"
+                    onblur='inputEingabeÜberprüfen("input-vorname", "Text", "status-vorname", true), formularFamilieÜberprüfen("status-allgemein", "formular-allgemein"), gewinneGesamtUnternehmenBerechnen()'
+                    oninput='inputEingabeÜberprüfen("input-vorname", "Text", "status-vorname"), formularFamilieÜberprüfen("status-allgemein", "formular-allgemein"), gewinneGesamtUnternehmenBerechnen()'
+                ></div>
+            </li>
+            <div class="hr-1"></div>
+            <li>
+                <div class="status"
+                    data-statusfunction='infoAlert("Bitte geben Sie Ihren Nachnamen ein")'
+                    data-statusid='status-nachname'
+                    data-statusfamilie='status-allgemein'
+                    data-statusdefault='warning'
+                ><input autocomplete="family-name" id="input-nachname" class="input-1" style="width: 100%; margin-right: 5px;"
+                    placeholder="Nachname"
+                    onblur='inputEingabeÜberprüfen("input-nachname", "Text", "status-nachname", true), formularFamilieÜberprüfen("status-allgemein", "formular-allgemein"), gewinneGesamtUnternehmenBerechnen()'
+                    oninput='inputEingabeÜberprüfen("input-nachname", "Text", "status-nachname"), formularFamilieÜberprüfen("status-allgemein", "formular-allgemein"), gewinneGesamtUnternehmenBerechnen()'
+                ></div>
+            </li>
+            <div class="hr-1"></div>
+            <li>
+                <div class="status info"
+                    data-statusfunction='infoAlert("Bitte wählen Sie die Klasse aus, in die Sie gehen.")'
+                    data-statusid='status-klasse'
+                    data-statusfamilie='status-allgemein'
+                    data-statusdefault='warning'
+                    data-infofunction='infoAlert("Bitte wählen Sie die Klasse aus, in die Sie gehen.")'
+                ><select id="klasse-liste" class="select-1" style="width: 100%; margin-right: 5px;"
+                    onblur='inputEingabeÜberprüfen("klasse-liste", "Liste", "status-klasse"), formularFamilieÜberprüfen("status-allgemein", "formular-allgemein"), gewinneGesamtUnternehmenBerechnen()'
+                    oninput='inputEingabeÜberprüfen("klasse-liste", "Liste", "status-klasse"), formularFamilieÜberprüfen("status-allgemein", "formular-allgemein"), gewinneGesamtUnternehmenBerechnen()'
+                ></select></div>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <div class="karten-abstand-1"></div>
+
+    <div class="karten-überschrift-2">FÜR WELCHES DATUM ERSTELLEN SIE DIESE STEUERERKLÄRUNG?</div>
+
+    <div class="karte inner">
+        <div class="status info"
+            data-statusfunction='infoAlert("Geben Sie das Datum ein, für welches Sie diese Steuererklärung erstellen wollen.\n\nGeben Sie das Datum in der Form TT/MM/JJJJ ein.")'
+            data-statusid='status-datum'
+            data-statusfamilie='status-allgemein'
+            data-statusdefault='warning'
+            data-infofunction='infoAlert("Geben Sie das Datum in der Form TT/MM/JJJJ ein.")'
+        ><input id="input-datum" class="input-1" style="width: 100%; margin-right: 5px;"
+            placeholder="Datum"
+            onblur='inputEingabeÜberprüfen("input-datum", "Datum", "status-datum", true), formularFamilieÜberprüfen("status-allgemein", "formular-allgemein"), gewinneGesamtUnternehmenBerechnen()'
+            oninput='inputEingabeÜberprüfen("input-datum", "Datum", "status-datum"), formularFamilieÜberprüfen("status-allgemein", "formular-allgemein"), gewinneGesamtUnternehmenBerechnen()'
+        ></div>
+    </div>
+
+
+    <div class="karten-abstand-1"></div>
+
+    <div class="karten-überschrift-2">IHR UNTERNEHMEN</div>
+
+    <div class="karte inner">
+        <ul>
+            <li>
+                <div class="status"
+                    data-statusfunction='infoAlert("Wählen Sie bitte Ihr Unternehmen aus.")'
+                    data-statusid='status-name-unternehmen'
+                    data-statusdefault='warning'
+                    data-statusfamilie='status-allgemein'
+                ><select id="unternehmen-liste" class="select-1" style="width: 100%; margin-right: 5px;"
+                    onblur='inputEingabeÜberprüfen("unternehmen-liste", "Liste", "status-name-unternehmen"), formularFamilieÜberprüfen("status-allgemein", "formular-allgemein"), gewinneGesamtUnternehmenBerechnen()'
+                    oninput='inputEingabeÜberprüfen("unternehmen-liste", "Liste", "status-name-unternehmen"), formularFamilieÜberprüfen("status-allgemein", "formular-allgemein"), gewinneGesamtUnternehmenBerechnen()'
+                ></select></div>
+            </li>        
+        </ul>
+    </div>
+
+    <div class="karten-abstand-3"></div>
+
+</div>
+
+
+<div class="karten-abstand-1"></div>
+
+
+
+
+<div id="angestellte-formular-gesamt-kontainer">
+
+<div><div id="kartencontainer-angestellter-1" class="angestellter-kartencontainer" style="height: 0px; transition: all 1s ease 0s;">
+
+    <div class="karten-abstand-1"></div>
+
+    <div class="karte">
+        <ul>
+            <div class="karten-abstand-3"></div>
+            <li>
+                <div class="titel-2 remove info status"
+                    data-infofunction='infoAlert("Bitte füllen Sie dieses Formular über Ihren Angestellten aus.\n\nBitte stellen Sie sicher, dass alle Felder korrekt ausgefüllt wurden.\n\nDrücken Sie das Minus-Symbol, um das Formular zu löschen.")'
+                    data-removefunction='karteEntfernen("kartencontainer-angestellter-1"), setTimeout("gewinneGesamtUnternehmenBerechnen()", 1010)'
+                    data-statusfunction='infoAlert("Bitte füllen Sie dieses Formular über Ihren Angestellten aus.\n\nBitte stellen Sie sicher, dass alle Felder korrekt ausgefüllt wurden.\n\nDrücken Sie das Minus-Symbol, um das Formular zu löschen.")'
+                    data-statusid='formular-angestellter-1'
+                    data-statusdefault='warning'
+                ><span style="width: 100%" onclick="" id="formular-display-nummer-angestellter-1">
+                    Steuerberechnung Angestellter 1
+                </span></div>
+            </li>
+            <div class="karten-abstand-2"></div>
+            <div class="karten-überschrift-2">PERSÖNLICHE INFORMATIONEN</div>
+            <li>   
+                <div class="karte inner">
+                <ul>
+                    <li>
+                        <div class="status"
+                            data-statusfunction='infoAlert("Bitte geben Sie den Vornamen Ihres Angestellten ein.")'
+                            data-statusid='status-vorname-angestellter-1'
+                            data-statusdefault='warning'
+                            data-statusfamilie='angestellter-1'
+                        ><input id="input-vorname-angestellter-1" class="input-1" style="width: 100%; margin-right: 5px;"
+                            placeholder="Vorname"
+                            onblur='inputEingabeÜberprüfen("input-vorname-angestellter-1", "Text", "status-vorname-angestellter-1", true), formularFamilieÜberprüfen("angestellter-1", "formular-angestellter-1"), gewinneGesamtUnternehmenBerechnen()'
+                            oninput='inputEingabeÜberprüfen("input-vorname-angestellter-1", "Text", "status-vorname-angestellter-1"), formularFamilieÜberprüfen("angestellter-1", "formular-angestellter-1"), gewinneGesamtUnternehmenBerechnen()'
+                        ></div>
+                    </li>
+                    <div class="hr-1"></div>
+                    <li>
+                        <div class="status"
+                            data-statusfunction='infoAlert("Bitte geben Sie den Nachnamen Ihres Angestellten ein.")'
+                            data-statusid='status-nachname-angestellter-1'
+                            data-statusdefault='warning'
+                            data-statusfamilie='angestellter-1'
+                        ><input  id="input-nachname-angestellter-1" class="input-1" style="width: 100%; margin-right: 5px;"
+                            placeholder="Nachname"
+                            onblur='inputEingabeÜberprüfen("input-nachname-angestellter-1", "Text", "status-nachname-angestellter-1", true), formularFamilieÜberprüfen("angestellter-1", "formular-angestellter-1"), gewinneGesamtUnternehmenBerechnen()'
+                            oninput='inputEingabeÜberprüfen("input-nachname-angestellter-1", "Text", "status-nachname-angestellter-1"), formularFamilieÜberprüfen("angestellter-1", "formular-angestellter-1"), gewinneGesamtUnternehmenBerechnen()'
+                        ></div>
+                    </li>
+                    <div class="hr-1"></div>
+                    <li>
+                        <div class="status"
+                            data-statusfunction='infoAlert("Bitte geben Sie die Klasse an, in der sich Ihr Angestellter befindet.")'
+                            data-statusid='status-klasse-angestellter-1'
+                            data-statusdefault='warning'
+                            data-statusfamilie='angestellter-1'
+                        ><select id="klasse-liste-angestellter-1" class="select-1" style="width: 100%; margin-right: 5px;"
+                            onblur='inputEingabeÜberprüfen("klasse-liste-angestellter-1", "Liste", "status-klasse-angestellter-1"), formularFamilieÜberprüfen("angestellter-1", "formular-angestellter-1"), gewinneGesamtUnternehmenBerechnen()'
+                            oninput='inputEingabeÜberprüfen("klasse-liste-angestellter-1", "Liste", "status-klasse-angestellter-1"), formularFamilieÜberprüfen("angestellter-1", "formular-angestellter-1"), gewinneGesamtUnternehmenBerechnen()'
+                        ></select></div>
+                    </li>
+                </ul>
+                </div>
+            </li>
+            <div class="karten-abstand-2"></div>
+            <div class="karten-überschrift-2">GEHALT</div>
+            <li>   
+                <div class="karte inner">
+                <ul>
+                    <li>
+                        <div class="status hbicon1"
+                            data-statusfunction='infoAlert("Bitte geben Sie den Stundenlohn Ihres Angestellten an.")'
+                            data-statusid='status-stundenlohn-angestellter-1'
+                            data-statusdefault='warning'
+                            data-statusfamilie='angestellter-1'
+                        ><input id="input-stundenlohn-angestellter-1" class="input-1" style="width: 100%; margin-right: 5px;"
+                            placeholder="Stundenlohn"
+                            onblur='inputEingabeÜberprüfen("input-stundenlohn-angestellter-1", "Betrag", "status-stundenlohn-angestellter-1", true), formularFamilieÜberprüfen("angestellter-1", "formular-angestellter-1"), angestellterSteuernBerechnen(1), gewinneGesamtUnternehmenBerechnen()'
+                            oninput='inputEingabeÜberprüfen("input-stundenlohn-angestellter-1", "Betrag", "status-stundenlohn-angestellter-1"), formularFamilieÜberprüfen("angestellter-1", "formular-angestellter-1"), angestellterSteuernBerechnen(1), gewinneGesamtUnternehmenBerechnen()'
+                        ></div>
+                    </li>
+                    <div class="hr-1"></div>
+                    <li>
+                        <div class="status"
+                            data-statusfunction='infoAlert("Bitte geben Sie den Bruttotageslohn Ihres Angestellten an.")'
+                            data-statusid='status-arbeitszeit-angestellter-1'
+                            data-statusdefault='warning'
+                            data-statusfamilie='angestellter-1'
+                        ><select id="input-arbeitszeit-angestellter-1" class="select-1" style="width: 100%; margin-right: 5px;"
+                            onblur='inputEingabeÜberprüfen("input-arbeitszeit-angestellter-1", "Liste", "status-arbeitszeit-angestellter-1", true), formularFamilieÜberprüfen("angestellter-1", "formular-angestellter-1"), angestellterSteuernBerechnen(1), gewinneGesamtUnternehmenBerechnen()'
+                            oninput='inputEingabeÜberprüfen("input-arbeitszeit-angestellter-1", "Liste", "status-arbeitszeit-angestellter-1"), formularFamilieÜberprüfen("angestellter-1", "formular-angestellter-1"), angestellterSteuernBerechnen(1), gewinneGesamtUnternehmenBerechnen()'
+                        >
+                            <option value="-"   >- Arbeitsdauer auswählen -</option>
+                            <option value="0"   >0 Std.</option>
+                            <option value="0.25">0 Std. 15 Min</option>
+                            <option value="0.5" >0 Std. 30 Min</option>
+                            <option value="0.75">0 Std. 45 Min</option>
+                            <option value="1"   >1 Std.</option>
+                            <option value="1.25">1 Std. 15 Min</option>
+                            <option value="1.5" >1 Std. 30 Min</option>
+                            <option value="1.75">1 Std. 45 Min</option>
+                            <option value="2"   >2 Std.</option>
+                            <option value="2.25">2 Std. 15 Min</option>
+                            <option value="2.5" >2 Std. 30 Min</option>
+                            <option value="2.75">2 Std. 45 Min</option>
+                            <option value="3"   >3 Std.</option>
+                            <option value="3.25">3 Std. 15 Min</option>
+                            <option value="3.5" >3 Std. 30 Min</option>
+                            <option value="3.75">3 Std. 45 Min</option>
+                            <option value="4"   >4 Std.</option>
+                            <option value="4.25">4 Std. 15 Min</option>
+                            <option value="4.5" >4 Std. 30 Min</option>
+                            <option value="4.75">4 Std. 45 Min</option>
+                            <option value="5"   >5 Std.</option>
+                            <option value="5.25">5 Std. 15 Min</option>
+                            <option value="5.5" >5 Std. 30 Min</option>
+                            <option value="5.75">5 Std. 45 Min</option>
+                            <option value="6"   >6 Std.</option>
+                        </select>
+                        </div>
+                    </li>
+                </ul>
+                </div>
+            </li>
+
+            <div class="karten-abstand-1"></div>
+
+            <div class="hr-1"></div>
+
+            <div class="karten-abstand-1"></div>
+            <div class="karten-überschrift-2">EINKOMMENSSTEUER</div>
+            <div class="karte inner">
+                <div class="text-1"
+                ><span style="width: 100%" onclick="">
+                    Steuergruppe
+                </span><span class="html-info-text-2" id="steuergruppe-angestellter-1">--</span>
+                </div>
+            </div>
+            <div class="karten-abstand-1"></div>
+            <div class="hr-1"></div>
+            <div class="karten-abstand-1"></div>
+            <div class="karten-überschrift-2">ERGEBNIS</div>
+            <div class="karte inner">
+                <div class="text-1"
+                ><span style="width: 100%; font-weight: 600;" onclick="">
+                    Bruttogehalt
+                </span><div class="html-info-text-2" style="display: flex; align-items: center;"><span id="bruttogehalt-angestellter-1" style="font-weight: 600;">--</span><span class="hbicon1"></span></div>
+                </div>
+            </div>
+            <div class="karte inner">
+                <div class="text-1"
+                ><span style="width: 100%; font-weight: 600;" onclick="">
+                    Einkommenssteuer
+                </span><div class="html-info-text-2" style="display: flex; align-items: center;"><span id="steuern-angestellter-1" style="font-weight: 600;">--</span><span class="hbicon1"></span></div>
+                </div>
+            </div>
+            <div class="karte inner">
+                <div class="text-1"
+                ><span style="width: 100%; font-weight: 600;" onclick="">
+                    Nettogehalt
+                </span><div class="html-info-text-2" style="display: flex; align-items: center;"><span id="auszahlung-angestellter-1" style="font-weight: 600;">--</span><span class="hbicon1"></span></div>
+            </div>
+            </div>
+            <div class="karten-abstand-3"></div>
+        </ul>
+    </div>
+</div>
+</div>
+
+</div> <!--FORMULAR ANGESTELLTER GESAMTKONTAINER ENDE-->
+
+
+<div class="karten-abstand-1"></div>
+
+
+<div class="karte">
+    <div class="text-1"
+        data-linkfunction=''
+        data-infofunction=''
+        data-infotextfunction=''
+        data-dropdownfunction=''
+        data-removefunction=''
+        data-statusfunction=''
+        data-statusid=''
+        data-booleanid=''
+        data-booleanfunction=''
+    ><span style="width: 100%; color: #0278FC; cursor: pointer;" onclick='angestellterFormularHinzufügen();'>
+        Weiteren Angestellten Hinzufügen
+    </span></div>
+</div>
+
+<div class="karten-abstand-1"></div>
+
+<div class="karten-abstand-1"></div>
+
+    <div class="karte">
+        <ul>
+            <div class="karten-abstand-3"></div>
+            <li>
+                <div class="titel-2 info status"
+                    data-infofunction='infoAlert("Bitte füllen Sie dieses Formular aus.\n\nBitte stellen Sie sicher, dass alle Felder korrekt ausgefüllt wurden.\n\Erklärungen zum Ausfüllen finden Sie im Erklärvideo")'
+                    data-statusfunction='infoAlert("Bitte füllen Sie dieses Formular aus.\n\nBitte stellen Sie sicher, dass alle Felder korrekt ausgefüllt wurden.\n\Erklärungen zum Ausfüllen finden Sie im Erklärvideo")'
+                    data-statusid='gewinnberecchnung-unternehmen-status'
+                    data-statusdefault='warning'
+                ><span style="width: 100%">
+                    Umsatzsteuer und Einkommenssteuer
+                </span></div>
+            </li>
+
+            <div class="karten-abstand-2"></div>
+
+            <div class="text-1">Um die Umsatzsteuer und Einkommenssteuer zu berechnen wird der Tagesumsatz und der Tagesausgaben ihres Unternehmens benötigt. Die Umsatzsteuer bezieht sich nur auf den Umsatz Ihres Unternehmens. Der Gewinn Ihres Unternehmens ergibt sich aus den Umsatz minus den Ausgaben, Löhnen und der Umsatzsteuer.<br><br>
+            
+            Der Gewinn Ihres Unternehmens wird als Ihr Tageslohn gewertet, weshalb darauf noch eine Einkommenssteuer erhoben wird.</div>
+
+            <div class="karten-abstand-1"></div>
+
+            <div class="hr-1"></div>
+
+            <div class="karten-abstand-1"></div>
+
+            <div class="karten-überschrift-2">UMSATZ UND AUSGABEN DES UNTERNEHMENS</div>
+
+            <div class="karte inner">
+                <ul>
+                    <li>
+                        <div class="status hbicon1 info text"
+                            data-statusfunction='infoAlert("Bitte geben Sie den Tagesumsatz ihres Unternehmens an.\n\nEinheit Humbucks (HB).")'
+                            data-statusid='status-umsatz-unternehmen'
+                            data-statusdefault='warning'
+                            data-statusfamilie="gewinnberechnung-ausgaben-umsatz gewinnberechnung-ausgaben-umsatz-stundenlohn"
+                            data-infofunction='infoAlert("Bitte geben Sie den Tagesumsatz ihres Unternehmens an.\n\nEinheit Humbucks (HB).")'
+                        ><input id="input-umsatz-unternehmen" class="input-1" style="width: 100%; margin-right: 5px;"
+                            placeholder="Tagesumsatz"
+                            onblur='inputEingabeÜberprüfen("input-umsatz-unternehmen", "Betrag", "status-umsatz-unternehmen", true), gewinneGesamtUnternehmenBerechnen(), formularFamilieÜberprüfen("gewinnberechnung-ausgaben-umsatz-stundenlohn", "gewinnberecchnung-unternehmen-status")'
+                            oninput='inputEingabeÜberprüfen("input-umsatz-unternehmen", "Betrag", "status-umsatz-unternehmen"), gewinneGesamtUnternehmenBerechnen(), formularFamilieÜberprüfen("gewinnberechnung-ausgaben-umsatz-stundenlohn", "gewinnberecchnung-unternehmen-status")'
+                        >{Umsatz}</div>
+                    </li>
+                    <div class="hr-1"></div>
+                    <li>
+                        <div class="status hbicon1 info text"
+                            data-statusfunction='infoAlert("Bitte geben Sie die Tagesausgaben ihres Unternehmens an.\n\nEinheit Humbucks (HB).")'
+                            data-statusid='status-ausgaben-unternehmen'
+                            data-statusdefault='warning'
+                            data-statusfamilie="gewinnberechnung-ausgaben-umsatz gewinnberechnung-ausgaben-umsatz-stundenlohn"
+                            data-infofunction='infoAlert("Bitte geben Sie die Tagesausgaben ihres Unternehmens an.\n\nEinheit Humbucks (HB).")'
+                        ><input id="input-ausgaben-unternehmen" class="input-1" style="width: 100%; margin-right: 5px;"
+                            placeholder="Tagesausgaben"
+                            onblur='inputEingabeÜberprüfen("input-ausgaben-unternehmen", "Betrag", "status-ausgaben-unternehmen", true), gewinneGesamtUnternehmenBerechnen(), formularFamilieÜberprüfen("gewinnberechnung-ausgaben-umsatz-stundenlohn", "gewinnberecchnung-unternehmen-status")'
+                            oninput='inputEingabeÜberprüfen("input-ausgaben-unternehmen", "Betrag", "status-ausgaben-unternehmen"), gewinneGesamtUnternehmenBerechnen(), formularFamilieÜberprüfen("gewinnberechnung-ausgaben-umsatz-stundenlohn", "gewinnberecchnung-unternehmen-status")'
+                        >{Ausgaben}</div>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <div class="karten-abstand-1"></div>
+
+            <div class="hr-1"></div>
+
+            <div class="karten-abstand-1"></div>
+            
+            <div class="karten-überschrift-2">GEWINNBERECHNUNG</div>
+            <li>   
+                <div class="karte inner">
+                    <ul>
+                        <li>
+                            <div class="text-1"
+                            ><span style="width: 100%" onclick="">
+                                Umsatz
+                            </span><div class="html-info-text-2" style="display: flex; align-items: center;"><span id="umsatz-gewinnberechnung">--</span><span class="hbicon1"></span></div>
+                        </li>
+                        <div class="hr-1"></div>
+                        <li>
+                            <div class="text-1"
+                            ><span style="width: 100%" onclick="">
+                                Ausgaben
+                            </span><div class="html-info-text-2" style="display: flex; align-items: center;"><span id="ausgaben-gewinnberechnung">--</span><span class="hbicon1"></span></div>
+                        
+                        </li>
+                        <div id="gewinnberechnung-steuern-löhne-abzüge"></div>
+                    </ul>
+                </div>
+            </li>
+
+            <div class="karten-abstand-2"></div>
+
+            <div class="karten-überschrift-2">BRUTTOGEWINN DES UNTERNEHMENS</div>
+
+            <div class="karte inner">
+
+                <div class="text-1"
+                ><span style="width: 100%; font-weight: 600;" onclick="">
+                    Bruttogewinn
+                </span><div class="html-info-text-2" style="display: flex; align-items: center;"><span id="bruttogewinn-endergebnis" style="font-weight: 600;">--</span><span class="hbicon1"></span></div>
+                </div>
+
+            </div> 
+
+            <div class="karten-abstand-1"></div>
+
+            <div class="hr-1"></div>
+
+            <div class="karten-abstand-1"></div>
+            <div class="karten-überschrift-2">UMSATZSTEUER</div>
+            <li>   
+                <div class="karte inner">
+                    <ul>
+                        <li>
+                            <div class="text-1"
+                            ><span style="width: 100%" onclick="">
+                                Umsatzsteuersatz
+                            </span><div class="html-info-text-2" style="display: flex; align-items: center;"><span id="umsatzsteuersatz">--</span></div>
+                        </li>
+                        <div class="hr-1"></div>
+                        <li>
+                            <div class="text-1"
+                            ><span style="width: 100%" onclick="">
+                                Umsatzsteuer
+                            </span><div class="html-info-text-2" style="display: flex; align-items: center;"><span id="umsatzsteuern">--</span><span class="hbicon1"></span></div>
+                        
+                        </li>
+                        <div id="gewinnberechnung-steuern-löhne-abzüge"></div>
+                    </ul>
+                </div>
+            </li>
+
+            <div class="karten-abstand-1"></div>
+
+            <div class="hr-1"></div>
+
+            <div class="karten-abstand-1"></div>
+
+            <div class="karten-überschrift-2">NETTOGEWINN DES UNTERNEHMENS</div>
+
+            <div class="karte inner">
+
+                <div class="text-1"
+                ><span style="width: 100%; font-weight: 600;" onclick="">
+                    Nettogewinn
+                </span><div class="html-info-text-2" style="display: flex; align-items: center;"><span id="gewinn-endergebnis" style="font-weight: 600;">--</span><span class="hbicon1"></span></div>
+                </div>
+
+            </div> 
+
+            <div class="karten-abstand-1"></div>
+
+            <div class="hr-1"></div>
+
+            <div class="karten-abstand-1"></div>
+
+            <div class="karten-überschrift-2">IHRE ARBEITSDAUER</div>
+
+            <li>
+                <div class="karte inner">
+                    <div class="status"
+                        data-statusfunction='infoAlert("Bitte geben Sie den Bruttotageslohn Ihres Angestellten an.")'
+                        data-statusid='status-arbeitszeit-unternehmer'
+                        data-statusdefault='warning'
+                        data-statusfamilie='gewinnberechnung-ausgaben-umsatz-stundenlohn'
+                    ><select id="input-arbeitszeit-unternehmer" class="select-1" style="width: 100%; margin-right: 5px;"
+                        onblur='inputEingabeÜberprüfen("input-arbeitszeit-unternehmer", "Liste", "status-arbeitszeit-unternehmer", true), formularFamilieÜberprüfen("gewinnberechnung-ausgaben-umsatz-stundenlohn", "gewinnberecchnung-unternehmen-status"), gewinneGesamtUnternehmenBerechnen()'
+                        oninput='inputEingabeÜberprüfen("input-arbeitszeit-unternehmer", "Liste", "status-arbeitszeit-unternehmer"), formularFamilieÜberprüfen("gewinnberechnung-ausgaben-umsatz-stundenlohn", "gewinnberecchnung-unternehmen-status"), gewinneGesamtUnternehmenBerechnen()'
+                    >
+                        <option value="-"   >- Arbeitsdauer auswählen -</option>
+                        <option value="0.25">0 Std. 15 Min</option>
+                        <option value="0.5" >0 Std. 30 Min</option>
+                        <option value="0.75">0 Std. 45 Min</option>
+                        <option value="1"   >1 Std.</option>
+                        <option value="1.25">1 Std. 15 Min</option>
+                        <option value="1.5" >1 Std. 30 Min</option>
+                        <option value="1.75">1 Std. 45 Min</option>
+                        <option value="2"   >2 Std.</option>
+                        <option value="2.25">2 Std. 15 Min</option>
+                        <option value="2.5" >2 Std. 30 Min</option>
+                        <option value="2.75">2 Std. 45 Min</option>
+                        <option value="3"   >3 Std.</option>
+                        <option value="3.25">3 Std. 15 Min</option>
+                        <option value="3.5" >3 Std. 30 Min</option>
+                        <option value="3.75">3 Std. 45 Min</option>
+                        <option value="4"   >4 Std.</option>
+                        <option value="4.25">4 Std. 15 Min</option>
+                        <option value="4.5" >4 Std. 30 Min</option>
+                        <option value="4.75">4 Std. 45 Min</option>
+                        <option value="5"   >5 Std.</option>
+                        <option value="5.25">5 Std. 15 Min</option>
+                        <option value="5.5" >5 Std. 30 Min</option>
+                        <option value="5.75">5 Std. 45 Min</option>
+                        <option value="6"   >6 Std.</option>
+                    </select>
+                </div></div>
+            </li>
+
+            <div class="karten-abstand-1"></div>
+
+            <div class="hr-1"></div>
+
+            <div class="karten-abstand-1"></div>
+
+            <div class="karten-überschrift-2">IHR GEHALT</div>
+
+            <li>   
+                <div class="karte inner">
+                    <div class="text-1"
+                    ><span style="width: 100%" onclick="">
+                        Stundenlohn
+                    </span><div class="html-info-text-2" style="display: flex; align-items: center;"><span id="stundenlohn-unternehmer">--</span><span class="hbicon1"></span></div>
+                </div>
+            </li>
+
+            <div class="karten-abstand-1"></div>
+
+            <div class="hr-1"></div>
+
+            <div class="karten-abstand-1"></div>
+
+            <div class="karten-überschrift-2">EINKOMMENSSTEUER</div>
+            <li>
+                <div class="karte inner">
+                    <div class="text-1"
+                    ><span style="width: 100%" onclick="">
+                        Steuergruppe
+                    </span><span class="html-info-text-2" id="steuergruppe-unternehmer">--</span>
+                    </div>
+                </div>
+            </li>
+            <div class="karten-abstand-1"></div>
+            <div class="hr-1"></div>
+            <div class="karten-abstand-1"></div>
+
+            <div class="karten-überschrift-2">ERGEBNIS</div>
+            <div class="karte inner">
+                <div class="text-1"
+                    ><span style="width: 100%; font-weight: 600;" onclick="">
+                        Bruttogehalt
+                    </span><div class="html-info-text-2" style="display: flex; align-items: center;"><span id="bruttogehalt-unternehmer" style="font-weight: 600;">--</span><span class="hbicon1"></span></div>
+                </div>
+            </div>
+            <div class="karte inner">
+                <div class="text-1"
+                    ><span style="width: 100%; font-weight: 600;" onclick="">
+                        Einkommenssteuer
+                    </span><div class="html-info-text-2" style="display: flex; align-items: center;"><span id="steuern-unternehmer" style="font-weight: 600;">--</span><span class="hbicon1"></span></div>
+                </div>
+            </div>
+            <div class="karte inner">
+                <div class="text-1"
+                    ><span style="width: 100%; font-weight: 600;" onclick="">
+                        Nettogehalt
+                    </span><div class="html-info-text-2" style="display: flex; align-items: center;"><span id="nettogehalt-unternehmer" style="font-weight: 600;">--</span><span class="hbicon1"></span></div>
+                </div>
+            </div>
+            <div class="karten-abstand-3"></div>
+        </ul>
+
+    </div>
+</div>
+
+
+
+<div class="karten-abstand-1"></div>
+<div class="karten-abstand-1"></div>
+<div class="karten-abstand-1"></div>
+
+
+
+<div class="karte">
+    <ul>
+        <div class="karten-abstand-3"></div>
+        
+        <div class="titel-2"
+        ><span style="width: 100%">
+            Übersicht
+        </span></div>
+
+        <div class="karten-abstand-2"></div>
+
+        <div class="text-1">Alles auf einen Blick - Hier eine Zusammenfassung der wichtigsten Informationen.</div>
+
+        <li id="warnung-übersicht">           
+            <div class="karten-abstand-2"></div>
+
+            <div class="text-1">
+                <img src='images/warning.svg' style='width: 24px; margin-right: 5px;'> Übersicht kann nicht erstellt werden! Stelle sicher, dass alle Formulare korrekt und vollständig ausgefüllt wurden! Falsch ausgefüllte Felder sind mit einem roten Symbol markiert.
+            </div>
+        </li>
+
+        <div class="karten-abstand-1"></div>
+
+        
+
+        <div class="hr-1"></div>
+
+        <div class="karten-abstand-1"></div>
+
+        <div class="karten-überschrift-2">ZU ZAHLENDE STEUERN</div>
+
+        <div class="karte inner">
+            <div class="text-1"
+                ><span style="width: 100%; font-weight: 600;" onclick="">
+                    Einkommenssteuer aller Angestellten
+                </span><div class="html-info-text-2" style="display: flex; align-items: center;"><span id="einkommenssteuer-angestellte-insgesamt" style="font-weight: 600;">--</span><span class="hbicon1"></span></div>
+            </div>
+        </div>
+        <div class="karte inner">
+            <div class="text-1"
+                ><span style="width: 100%; font-weight: 600;" onclick="">
+                    Umsatzsteuer
+                </span><div class="html-info-text-2" style="display: flex; align-items: center;"><span id="umsatzsteuer-unternehmen-insgesamt" style="font-weight: 600;">--</span><span class="hbicon1"></span></div>
+            </div>
+        </div>
+        <div class="karte inner">
+            <div class="text-1"
+                ><span style="width: 100%; font-weight: 600;" onclick="">
+                    Ihre Einkommenssteuer
+                </span><div class="html-info-text-2" style="display: flex; align-items: center;"><span id="einkommenssteuer-unternehmer-insgesamt" style="font-weight: 600;">--</span><span class="hbicon1"></span></div>
+            </div>
+        </div>
+
+        <div class="karten-abstand-3"></div>
+
+        <div class="hr-1"></div>
+
+        <div class="karten-abstand-3"></div>
+
+        <div class="karten-überschrift-2">ZU ZAHLENDE STEUERN INSGESAMT</div>
+
+        <div class="karte inner">
+            <div class="text-1"
+                ><span style="width: 100%; font-weight: 600;" onclick="">
+                    Steuern Insgesamt
+                </span><div class="html-info-text-2" style="display: flex; align-items: center;"><span id="steuern-insgesamt" style="font-weight: 600;">--</span><span class="hbicon1"></span></div>
+            </div>
+        </div>
+
+        
+        <div class="karten-abstand-1"></div>
+
+        <div class="hr-1"></div>
+
+        <div class="karten-abstand-1"></div>
+
+        <div id="angestellte-übersicht"></div>
+
+    </ul>
+</div>
+
+<div class="karten-abstand-1"></div>
+
+
+<div class="karte">
+    <ul>
+        <div class="karten-abstand-3"></div>
+        
+        <div class="titel-2"
+        ><span style="width: 100%">
+            Einreichen und Exportieren
+        </span></div>
+
+        <div class="karten-abstand-2"></div>
+
+        <div class="text-1">Exportiere alle relevanten Daten als .pdf oder .txt, um diese an das Finanzamt weiter zu geben.</div>
+
+        <li id="warnung-einreichen-und-exportieren">           
+            <div class="karten-abstand-2"></div>
+
+            <div class="text-1">
+                <img src='images/warning.svg' style='width: 24px; margin-right: 5px;'> Formular kann nicht exportiert werden! Stelle sicher, dass alle Formulare korrekt und vollständig ausgefüllt wurden! Falsch ausgefüllte Felder sind mit einem roten Symbol markiert.
+            </div>
+        </li>
+
+        <li>           
+            <div class="karten-abstand-2"></div>
+
+            <div class="text-1">
+                <img src='images/warning.svg' style='width: 24px; margin-right: 5px;'> Formular wird als .pdf fehlerhaft exportiert? Exportiere es dann als .txt
+            </div>
+        </li>
+
+        <div class="karten-abstand-1"></div>
+
+
+
+        <div class="karte inner text">
+            <div class="text-1"
+
+            ><span style="width: 100%; color: #0278FC; cursor: pointer;" onclick='abschickenBestätigen()'>
+                Formular Exportieren {.pdf}
+            </span></div>
+        </div>
+
+        <div class="karte inner text">
+            <div class="text-1"
+
+            ><span style="width: 100%; color: #0278FC; cursor: pointer;" onclick='txtExport()'>
+                Formular Exportieren {.txt}
+            </span></div>
+        </div>
+
+        <script>
+            function abschickenBestätigen() {
+                if(confirm("Sind Sie sich sicher, dass Sie das gesamte Formular so exportieren wollen?") == true) {
+                    datenSammeln();
+                }
+            }
+
+
+            function txtExport() {
+                if(confirm("Sind Sie sich sicher, dass Sie das gesamte Formular so exportieren wollen?") == true) {
+                    datenSammeln2();
+                }
+            }
+        </script>
+        
+
+        <div class="karten-abstand-3"></div>
+    </ul>
+</div>
+
+
+
+
+
+<form style="display: none;" action="steuerrechner.php" method="post" id="data-felder">
+
+    <input id="data-feld-1" name="data1">
+    <input id="data-feld-2" name="data2">
+    <input id="data-feld-3" name="data3">
+    <input id="data-feld-4" name="data4">
+    <input id="data-feld-5" name="data5">
+    <input id="data-feld-6" name="data6">
+    <input id="data-feld-7" name="data7">
+    <input id="data-feld-8" name="data8">
+    <input id="data-feld-9" name="data9">
+    <input id="data-feld-10" name="data10">
+    <input id="data-feld-11" name="data11">
+    <input id="data-feld-12" name="data12">
+    <input id="data-feld-13" name="data13">
+    <input id="data-feld-14" name="data14">
+    <input id="data-feld-15" name="data15">
+    <input id="data-feld-16" name="data16">
+    <input id="data-feld-17" name="data17">
+    <input id="data-feld-18" name="data18">
+    <input id="data-feld-19" name="data19">
+    <input id="data-feld-20" name="data20">
+</form>
+
+<script>
+
+    function datenSenden() {
+                const form = document.getElementById('data-felder');
+                const formData = new FormData(form);
+
+                fetch('steuerrechner.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    console.log(data); // Hier kannst du die Antwort vom PHP-Skript verarbeiten
+                })
+                .catch(error => {
+                    console.error('Fehler beim Senden der Daten: ', error);
+                });
+            }
+
+</script>
+
+
+
+
+<div class="karten-abstand-1"></div>
+<div class="karten-abstand-1"></div>
+<div class="karten-abstand-1"></div>
+
+<div><span style="align-items: center; display: block; justify-content: center; color: #c8c8cc; font-size: 12px; text-align: center;">Powered by <span style="font-weight: 500;">TIMOTHY KLIMKE</span></span></div>
+
+<div style="display: flex; margin-top: 5px; align-items: center; justify-content: center; vertical-align: center;">
+    <a display="inline-block;" href='https://www.instagram.com/terribly.thrilled.timmy/' target="_blank"><img style="height: 24px; margin: 3px; cursor: pointer" src="images/IG_logo.svg"></a>
+    <a display="inline-block;" href='https://www.youtube.com/@pandatimmymrt1635' target="_blank"><img style="height: 24px; margin: 3px; cursor: pointer" src="images/YT_logo.svg"></a>
+</div>
+<div class="karten-abstand-1"></div>
+
+
+<div class="karten-abstand-1"></div>
+<div class="karte">
+    <div class="text-1"
+        data-linkfunction=''
+        data-infofunction=''
+        data-infotextfunction=''
+        data-dropdownfunction=''
+        data-removefunction=''
+        data-statusfunction=''
+        data-statusid=''
+        data-booleanid=''
+        data-booleanfunction=''
+    ><span style="width: 100%; color: #0278FC; cursor: pointer;" onclick='fillDocument()'>
+        Autofill
+    </span></div>
+</div><div class="karten-abstand-2"></div>
+
+
+<!--<?php 
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $user = 'root';
+    $pass = '';
+    $db = 'steuererklärungenpersonendb';
+
+    $db = new mysqli('localhost', $user, $pass, $db);
+
+    $datum           = $_POST['data1'];
+    $vorname         = $_POST['data2'];
+    $nachname        = $_POST['data3'];
+    $klasse          = $_POST['data4'];
+    $unternehmen     = $_POST['data5'];
+    $stundenlohn     = $_POST['data6'];
+    $arbeitsdauer    = $_POST['data7'];
+    $bruttotageslohn = $_POST['data8'];
+    $steuergruppe    = $_POST['data9'];
+    $steuersatz      = $_POST['data10'];
+    $steuern         = $_POST['data11'];
+    $nettotageslohn  = $_POST['data12'];
+    $gezahlt         = $_POST['data13'];
+
+    $erstellt        = date('Y-m-d H:i:s');
+
+
+
+    $sql = "INSERT INTO `steuererklärungen`(
+        `Datum`,
+        `Erstellt`,
+        `Vorname`,
+        `Nachname`,
+        `Klasse`,
+        `Unternehmen`,
+        `Stundenlohn`,
+        `Arbeitsdauer`,
+        `Bruttotageslohn`,
+        `Steuergruppe`,
+        `Steuersatz`,
+        `Steuern`,
+        `Nettotageslohn`,
+        `Gezahlt`)
+        VALUES (
+        '$datum',
+        '$erstellt',
+        '$vorname',
+        '$nachname',
+        '$klasse',
+        '$unternehmen',
+        '$stundenlohn',
+        '$arbeitsdauer',
+        '$bruttotageslohn',
+        '$steuergruppe',
+        '$steuersatz',
+        '$steuern',
+        '$nettotageslohn',
+        '$gezahlt')";
+
+
+    if ($db->query($sql) === TRUE) {
+        echo "Daten wurden erfolgreich in die Datenbank eingefügt.";
+    } else {
+        echo "Fehler beim Einfügen der Daten: " . $db->error;
+    }
+
+}
+
+?>-->
+
+
+<div id="formulare-exportieren" style="background-color: white;"></div>
+
+
+
+
+</div>
+
+
+<script>
+    function drucken() {
+        var element = document.getElementById("formulare-exportieren");
+        if (element) {
+            $(element).printThis({
+                importCSS: true,
+                importStyle: true,
+                loadCSS: "css/css.css",
+                pageTitle: "Formulare exportieren",
+                printDelay: 0,
+                pageTitle: "Steuererklärung"
+            });
+        }
+    }
+
+    function beforePrint() {
+
+    }
+
+    function afterPrint() {
+        document.getElementById("formulare-exportieren").innerHTML = "";
+    }
+
+</script>

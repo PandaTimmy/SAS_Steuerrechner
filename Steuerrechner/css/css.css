@@ -1,0 +1,372 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  font-family: "inter", "arial";
+  background-color: #f2f2f6;
+  margin: 0px;
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+
+.karte {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  vertical-align: middle;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.karte.selected {
+  background-color: #e0dfe5;
+}
+.karte.none {
+  background-color: #f2f2f6;
+}
+.karte.inner {
+  background-color: rgba(242, 242, 246, 0.5490196078);
+  margin: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.karte .titel-1 {
+  display: flex;
+  font-size: 16px;
+  font-weight: 600;
+  align-items: center;
+}
+.karte .titel-1 span {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.karte .titel-2 {
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+  align-items: center;
+}
+.karte .titel-2 span {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.karte .text-1 {
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  align-items: center;
+  min-height: 24px;
+}
+.karte .text-1 span {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-weight: 400;
+}
+.karte .input-1 {
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  align-items: center;
+  max-height: 24px;
+  min-height: 24px;
+  padding: 0px;
+  border-width: 0px;
+  border: 0;
+  outline: none;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background-color: rgba(255, 255, 255, 0);
+}
+.karte .select-1 {
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  max-height: 24px;
+  min-height: 24px;
+  padding: 0px;
+  border-width: 0px;
+  border: 0;
+  outline: none;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  background-color: rgba(242, 242, 246, 0.6117647059);
+  padding-left: 0px;
+  border-radius: 10px;
+  color: #000000;
+  font-family: "inter";
+}
+.karte ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.karte ul .hr-1 {
+  background-color: #dbdbdb;
+  border-width: 10px;
+  height: 1px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.karte .dropdown-menu {
+  max-height: 0;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+.karten-überschrift-0 {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 32px;
+  color: #000000;
+  font-weight: 600;
+}
+
+.karten-überschrift-1 {
+  margin-left: 35px;
+  margin-right: 20px;
+  font-size: 12px;
+  color: #8a898e;
+}
+
+.karten-überschrift-2 {
+  margin-left: 15px;
+  margin-right: 20px;
+  font-size: 12px;
+  color: #8a898e;
+}
+
+.html-info-text-1 {
+  color: #8a898e;
+  padding-right: 5px;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.html-info-text-2 {
+  color: #000000;
+  padding-right: 5px;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.dropdown-arrow {
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+.karten-abstand-1 {
+  height: 35px;
+}
+
+.karten-abstand-2 {
+  height: 15px;
+}
+
+.karten-abstand-3 {
+  height: 10px;
+}
+
+.navigation {
+  z-index: 1000;
+  background-color: rgba(242, 242, 246, 0.6549019608);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-bottom: 1px solid #dbdbdb;
+  width: 100%;
+  position: sticky;
+  height: 40px;
+  top: 0px;
+  display: flex;
+}
+.navigation span {
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  width: calc(100% - 20px);
+  font-size: 16px;
+  padding: 10px;
+  margin: 0;
+}
+
+.main:not(.sidemenu) {
+  flex: 1;
+}
+.main .scroll {
+  overflow: hidden;
+}
+
+.static {
+  position: sticky;
+  top: 0px;
+}
+
+.sidemenu {
+  z-index: 2000;
+  background-color: #f2f2f6;
+  flex: 0;
+  max-height: none;
+  height: auto;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (min-width: 600px) {
+  .sidemenu {
+    min-width: 250px;
+    max-width: 250px;
+    position: relative;
+  }
+}
+@media screen and (max-width: 600px) {
+  .sidemenu {
+    max-width: 0px;
+    min-width: 0px;
+    display: block;
+    float: left;
+    position: fixed;
+  }
+}
+@media screen and (max-width: 600px) {
+  .sidemenu.open {
+    min-width: 100%;
+  }
+}
+.sidemenu .sidemenu-border {
+  border-right: 1px solid #dbdbdb;
+  height: 100vh;
+}
+
+.sidemenu-button {
+  opacity: 0;
+  transition: opacity 0.1s ease-in;
+}
+@media screen and (max-width: 600px) {
+  .sidemenu-button {
+    opacity: 100;
+    transition: opacity 0.5s ease-in-out;
+  }
+}
+
+.booleanoutside {
+  min-width: 40px;
+  min-height: 24px;
+  border-radius: 12px;
+  margin-left: 5px;
+  overflow: hidden;
+  padding-left: 0px;
+  cursor: pointer;
+  background-color: #e9e9eb;
+  transition: all 0.15s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.booleanoutside.checked {
+  background-color: #34c85a;
+  padding-left: 16px;
+  padding-right: 0px;
+  min-width: 24px;
+}
+.booleanoutside .booleaninside {
+  min-width: 20px;
+  min-height: 20px;
+  max-width: 20px;
+  margin-top: 2px;
+  margin-left: 2px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.1));
+}
+
+.angestellter-kartencontainer {
+  overflow: hidden;
+  transition: all 1s ease;
+}
+
+.exportform-title-1 {
+  font-size: 20.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.exportform-title-2 {
+  font-size: 28.2px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.exportform-text-1 {
+  font-size: 17.9px;
+  font-weight: 400;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  white-space: nowrap;
+}
+
+.exportform-text-2 {
+  font-size: 20.5px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.karten-text-1 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.PP {
+  max-width: 150px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+@media screen and (max-width: 750px) {
+  .PP {
+    max-width: 100px;
+  }
+}
+
+.profilecontainer {
+  display: flex;
+}
+@media screen and (max-width: 400px) {
+  .profilecontainer {
+    display: block;
+  }
+}
+.profilecontainer img {
+  display: flex;
+  cursor: pointer;
+}
+.profilecontainer ul {
+  margin-left: 10px;
+  margin-top: none;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 400px) {
+  .profilecontainer ul {
+    margin-left: none;
+    margin-top: 10px;
+  }
+}
+
+.ProfileText {
+  font-size: 16px;
+}
+@media screen and (max-width: 750px) {
+  .ProfileText {
+    font-size: 14px;
+  }
+}
+
+.IGLOGO {
+  margin-left: 0px;
+  width: 50px;
+  margin-top: -50px;
+}
+@media screen and (max-width: 750px) {
+  .IGLOGO {
+    margin-left: 0px;
+    width: 30px;
+    margin-top: -30px;
+    transition: all 0.5s ease;
+  }
+}/*# sourceMappingURL=css.css.map */

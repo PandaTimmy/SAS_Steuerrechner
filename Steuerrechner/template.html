@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Template</title>
+
+
+    <link rel="stylesheet" href="css/css.css">
+    <script src="js/js.js"></script>
+</head>
+
+<body style="display: flex;">
+
+<div class="topline" style="z-index: 999999; min-width: 100vw; min-height: 1px; position: fixed; background-color: #dbdbdb;"></div>
+
+<img src='icons/menu.svg' class="sidemenu-button" style='max-width: 28px; cursor: pointer; margin-left: 19px; margin-top: 5px; position: fixed; z-index: 3000;' onclick='openCloseSidemenu("sidemenu-1")'>
+
+
+
+<div id="sidemenu-1" class="main sidemenu">
+
+<div class="scroll static sidemenu-border">
+
+
+    <div class="karten-abstand-1"></div>
+    <div class="karten-abstand-1"></div>
+
+    <div class="karten-überschrift-0">Menü</div>
+
+    <div class="karten-abstand-1"></div>
+
+    <div class="karte selected">
+        <div class="titel-1 link2"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction=''
+                data-statusfunction=''
+                data-statusid=''
+            ><span style="width: 100%" onclick=''>
+                Home
+            </span></div>
+    </div>
+    
+    <div class="karte none">
+        <div class="titel-1 link2"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction=''
+                data-statusfunction=''
+                data-statusid=''
+                data-booleanid=''
+                data-booleanfunction=''
+            ><span style="width: 100%" onclick=''>
+                Steuerrechner
+            </span></div>
+    </div>
+
+    <div style="margin: 20px; margin-left: 20px; margin-right: 20px; background-color: #dbdbdb; height: 1px;"></div>
+
+    <div class="karte none">
+        <div class="titel-1 link2" onclick='weiterleiten("admin.php")' style="cursor: pointer;" 
+            ><span style="width: 100%; white-space: nowrap;" >
+                Admin
+            </span></div>
+    </div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="main">
+
+
+<div class="navigation" style="display: block; overflow: hidden;">
+    <span>Lorem Ipsum</span>
+</div>
+
+<div class="scroll">
+
+<div class="karten-abstand-1"></div>
+<div class="karten-abstand-1"></div>
+
+<div class="karte">
+    <ul>
+        <li>
+            <div class="titel-1 status text boolean"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction='infoAlert("Lorem Ipsum")'
+                data-statusfunction='infoAlert("Lorem Ipsum")'
+                data-statusid='statusid1'
+                data-booleanid='boolean-1'
+                data-booleanfunction='switchBoolean("boolean-1")'
+            ><span style="width: 100%" onclick="">
+                Lorem Ipsum {Lorem Ipsum}
+            </span></div>
+        </li>
+        <div class="hr-1"></div>
+        <li>
+            <div class="text-1 info text"
+                data-linkfunction=''
+                data-infofunction='infoAlert("Lorem Ipsum")'
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction=''
+                data-statusfunction=''
+                data-statusid=''
+                data-booleanid=''
+                data-booleanfunction=''
+            ><span style="width: 100%" onclick="">
+                Lorem Ipsum {Lorem Ipsum}
+            </span></div>
+        </li>
+    </ul>
+</div>
+
+<div id="kartencontainer">
+    <div class="karten-abstand-1"></div>
+
+    <div class="karte" id="kartenid-1">
+        <div class="titel-1 remove"
+            data-linkfunction=''
+            data-infofunction=''
+            data-infotextfunction=''
+            data-dropdownfunction=''
+            data-removefunction='karteEntfernen("kartencontainer")'
+            data-statusfunction=''
+            data-statusid='statusid1'
+            data-booleanid=''
+            data-booleanfunction=''
+        ><span style="width: 100%" onclick="">
+            Lorem Ipsum
+        </span></div>
+    </div>
+</div>
+
+<div class="karten-abstand-1"></div>
+
+
+<div class="karte">
+    <div class="text-1"
+        data-linkfunction=''
+        data-infofunction=''
+        data-infotextfunction=''
+        data-dropdownfunction=''
+        data-removefunction=''
+        data-statusfunction=''
+        data-statusid=''
+        data-booleanid=''
+        data-booleanfunction=''
+    ><span style="width: 100%; color: #0278FC; cursor: pointer;" onclick='infoAlert("Lorem Ipsum")'>
+        Link 1
+    </span></div>
+</div>
+
+<div class="karte">
+    <div id="dropdown-menü-1-text" class="text-1 info dropdown text"
+        data-linkfunction=''
+        data-infofunction='infoAlert("Lorem Ipsum")'
+        data-infotextfunction='dropwdown_menu_aktion("dropdown-menü-1")'
+        data-dropdownfunction='dropwdown_menu_aktion("dropdown-menü-1")'
+        data-removefunction=''
+        data-statusfunction=''
+        data-statusdefault=''
+        data-statusid=''
+        data-booleanid=''
+        data-booleanfunction=''
+    ><span style="width: 100%; cursor: pointer;" onclick='dropwdown_menu_aktion("dropdown-menü-1")'>
+        Lorem Ipsum {Lorem Ipsum}
+    </span></div>
+    
+    <ul id="dropdown-menü-1" class="dropdown-menu close">
+
+        <div class="hr-1"></div>
+
+        <li>
+            <div class="text-1"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction=''
+                data-statusfunction=''
+                data-statusdefault=''
+                data-statusid=''
+                data-booleanid=''
+                data-booleanfunction=''
+            ><span style="width: 100%; color: #0278FC; cursor: pointer;" onclick='dropwdown_menu_aktion("dropdown-menü-1")'>
+                Dropdown schließen
+            </span></div>
+        </li>
+
+        <div class="hr-1"></div>
+
+        <div class="text-1"
+            data-linkfunction=''
+            data-infofunction=''
+            data-infotextfunction=''
+            data-dropdownfunction=''
+            data-removefunction=''
+            data-statusfunction=''
+            data-statusdefault=''
+            data-statusid=''
+            data-booleanid=''
+            data-booleanfunction=''
+        ><span style="width: 100%">
+            Lorem Ipsum
+        </span></div>
+
+        <div class="hr-1"></div>
+
+        <div class="text-1"
+            data-linkfunction=''
+            data-infofunction=''
+            data-infotextfunction=''
+            data-dropdownfunction=''
+            data-removefunction=''
+            data-statusfunction=''
+            data-statusdefault=''
+            data-statusid=''
+            data-booleanid=''
+            data-booleanfunction=''
+        ><span style="width: 100%">
+            Lorem Ipsum
+        </span></div>
+
+        
+
+        
+    </ul>
+</div>
+
+<div class="karte">
+    <div class="titel-1"
+            data-linkfunction=''
+            data-infofunction=''
+            data-infotextfunction=''
+            data-dropdownfunction=''
+            data-removefunction=''
+            data-statusfunction=''
+            data-statusdefault=''
+            data-statusid=''
+            data-booleanid=''
+            data-booleanfunction=''
+        ><span style="width: 100%">
+            Überschrift
+        </span></div>
+    <div class="text-1"
+            data-linkfunction=''
+            data-infofunction=''
+            data-infotextfunction=''
+            data-dropdownfunction=''
+            data-removefunction=''
+            data-statusfunction=''
+            data-statusdefault=''
+            data-statusid=''
+            data-booleanid=''
+            data-booleanfunction=''
+        ><span style="width: 100%">
+            Lorem Ipsum
+        </span></div>
+</div>
+
+
+
+<div class="karten-abstand-1"></div>
+
+
+
+<div class="karten-überschrift-0">Überschrift</div>
+
+
+
+<div class="karten-abstand-1"></div>
+
+
+
+<div class="karten-überschrift-1">TEXT</div>
+
+<div class="karte">
+    <div class="status"
+        data-linkfunction=''
+        data-infofunction=''
+        data-infotextfunction=''
+        data-dropdownfunction=''
+        data-removefunction=''
+        data-statusfunction='infoAlert("Lorem Ipsum")'
+        data-statusid='statusid5'
+        data-statusfamilie=''
+        data-statusdefault='warning'
+        data-booleanid=''
+        data-booleanfunction=''
+    ><input id="input4" class="input-1" style="width: 100%; margin-right: 5px;"
+        placeholder="text"
+        onblur='inputEingabeÜberprüfen("input4", "Text", "statusid5", true)'
+        oninput='inputEingabeÜberprüfen("input4", "Text", "statusid5")'
+    ></div>
+</div>
+
+
+
+<div class="karten-abstand-1"></div>
+
+
+
+<div class="karten-überschrift-1">TEXT</div>
+
+<div class="karte" style="padding-left: 8px;">
+    <div class="status"
+        data-linkfunction=''
+        data-infofunction=''
+        data-infotextfunction=''
+        data-dropdownfunction=''
+        data-removefunction=''
+        data-statusfunction='infoAlert("Lorem Ipsum")'
+        data-statusid='statusid5'
+        data-statusfamilie=''
+        data-statusdefault='warning'
+        data-booleanid=''
+        data-booleanfunction=''
+    ><select id="input99" class="select-1" style="width: 100%; margin-right: 5px;">
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="hamster">Hamster</option>
+        <option value="parrot">Parrot</option>
+        <option value="spider">Spider</option>
+        <option value="goldfish">Goldfish</option>
+    </select>
+
+    </div>
+</div>
+
+
+
+<div class="karten-abstand-1"></div>
+
+
+
+<div class="karten-überschrift-1">DATUM</div>
+
+<div class="karte">
+    <div class="status"
+        data-statusfunction='infoAlert("Lorem Ipsum")'
+        data-statusid='statusid2'
+        data-statusfamilie=''
+        data-statusdefault='warning'
+        data-linkfunction=''
+        data-infofunction=''
+        data-infotextfunction=''
+        data-dropdownfunction=''
+        data-removefunction=''
+        data-booleanid=''
+        data-booleanfunction=''
+    ><input id="input1" class="input-1" style="width: 100%; margin-right: 5px;"
+        placeholder="MM/TT/JJJJ"
+        onblur='inputEingabeÜberprüfen("input1", "Datum", "statusid2", true)'
+        oninput='inputEingabeÜberprüfen("input1", "Datum", "statusid2")'
+    ></div>
+</div>
+
+
+
+<div class="karten-abstand-1"></div>
+
+
+
+<div class="karten-überschrift-1">BETRAG</div>
+
+<div class="karte">
+    <div class="status hbicon1"
+        data-statusfunction='infoAlert("Lorem Ipsum")'
+        data-statusid='statusid3'
+        data-statusfamilie=''
+        data-statusdefault='warning'
+    ><input id="input2" class="input-1" style="width: 100%; margin-right: 5px;"
+        placeholder="0"
+        onblur='inputEingabeÜberprüfen("input2", "Betrag", "statusid3", true)'
+        oninput='inputEingabeÜberprüfen("input2", "Betrag", "statusid3")'
+    ></div>
+</div>
+
+
+
+<div class="karten-abstand-1"></div>
+
+
+
+<div class="karten-überschrift-1">NUMMER</div>
+
+<div class="karte">
+    <div class="status"
+        data-statusfunction='infoAlert("Lorem Ipsum")'
+        data-statusid='statusid4'
+        data-statusfamilie=''
+        data-statusdefault='warning'
+    ><input id="input3" class="input-1" style="width: 100%; margin-right: 5px;"
+        placeholder="0"
+        onblur='inputEingabeÜberprüfen("input3", "Nummer", "statusid4", true)'
+        oninput='inputEingabeÜberprüfen("input3", "Nummer", "statusid4")'
+    ></div>
+</div>
+
+
+
+<div class="karten-abstand-1"></div>
+
+
+<div class="karten-überschrift-1">WÄHLE HÖCHSTENS 1</div>
+
+<div class="karte">
+    <ul>
+        <li>
+            <div class="text-1 status selectoptionselected"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction=''
+                data-statusfunction=''
+                data-statusid='statusid8'
+                data-statusfamilie='status-familie-1'
+                data-statusdefault='check'
+            ><span style="width: 100%" onclick='listSelect("statusid8", "status-familie-1", 0, 1)'>
+                Lorem Ipsum
+            </span></div>
+        </li>
+        <div class="hr-1"></div>
+        <li>
+            <div class="text-1 status"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction=''
+                data-statusfunction=''
+                data-statusid='statusid9'
+                data-statusfamilie='status-familie-1'
+                data-statusdefault='none'
+            ><span style="width: 100%" onclick='listSelect("statusid9", "status-familie-1", 0, 1)'>
+                Lorem Ipsum
+            </span></div>
+        </li>
+        <div class="hr-1"></div>
+        <li>
+            <div class="text-1 status"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction=''
+                data-statusfunction=''
+                data-statusid='statusid10'
+                data-statusfamilie='status-familie-1'
+                data-statusdefault='none'
+            ><span style="width: 100%" onclick='listSelect("statusid10", "status-familie-1", 0,  1)'>
+                Lorem Ipsum
+            </span></div>
+        </li>
+    </ul>
+</div>
+
+<div class="karten-überschrift-1">WÄHLE MINDESTENS 1 UND HÖCHSTENS 2</div>
+
+<div class="karte">
+    <ul>
+        <li>
+            <div class="text-1 status selectoptionselected"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction=''
+                data-statusfunction=''
+                data-statusid='statusid11'
+                data-statusfamilie='status-familie-2'
+                data-statusdefault='check'
+            ><span style="width: 100%" onclick='listSelect("statusid11", "status-familie-2", 1, 2)'>
+                Lorem Ipsum
+            </span></div>
+        </li>
+        <div class="hr-1"></div>
+        <li>
+            <div class="text-1 status"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction=''
+                data-statusfunction=''
+                data-statusid='statusid12'
+                data-statusfamilie='status-familie-2'
+                data-statusdefault='none'
+            ><span style="width: 100%" onclick='listSelect("statusid12", "status-familie-2", 1, 2)'>
+                Lorem Ipsum
+            </span></div>
+        </li>
+        <div class="hr-1"></div>
+        <li>
+            <div class="text-1 status"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction=''
+                data-statusfunction=''
+                data-statusid='statusid13'
+                data-statusfamilie='status-familie-2'
+                data-statusdefault='none'
+            ><span style="width: 100%" onclick='listSelect("statusid13", "status-familie-2", 1, 2)'>
+                Lorem Ipsum
+            </span></div>
+        </li>
+    </ul>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+</body>
+</html>

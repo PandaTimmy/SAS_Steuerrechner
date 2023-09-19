@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Steuerrechner</title>
+
+    <link rel="stylesheet" href="css/css.css">
+    <script src="js/js.js"></script>
+    <script src="js/steuerrechner.js"></script>
+    <script src="js/html2canvas.js"></script>
+   
+</head>
+
+
+<body style="display: flex;">
+
+<div class="topline" style="z-index: 999999; min-width: 100vw; min-height: 1px; position: fixed; background-color: #dbdbdb;"></div>
+
+<img src='images/menu.svg' class="sidemenu-button" style='max-width: 28px; cursor: pointer; margin-left: 19px; margin-top: 5px; position: fixed; z-index: 3000;' onclick='openCloseSidemenu("sidemenu-1")'>
+
+
+
+<div id="sidemenu-1" class="main sidemenu">
+
+<div class="scroll static sidemenu-border">
+
+
+    <div class="karten-abstand-1"></div>
+    <div class="karten-abstand-1"></div>
+
+    <div class="karten-überschrift-0" style="white-space: nowrap;">Menü</div>
+
+    <div class="karten-abstand-1"></div>
+
+    <div class="karte none">
+        <div class="titel-1 link2" onclick='weiterleiten("index.html")' style="cursor: pointer;" 
+            ><span style="width: 100%; white-space: nowrap;" >
+                Home
+            </span></div>
+    </div>
+    
+    <div class="karte none">
+        <div class="titel-1 link2" onclick='weiterleiten("steuerrechner.html")' style="cursor: pointer;" 
+            ><span style="width: 100%; white-space: nowrap;" >
+                Steuerrechner
+            </span></div>
+    </div>
+
+    <div class="karte selected">
+        <div class="titel-1 link2"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction=''
+                data-statusfunction=''
+                data-statusid=''
+            ><span style="width: 100%; white-space: nowrap;" onclick=''>
+                Steuern Erklärt
+            </span></div>
+    </div>
+
+    <div style="margin: 20px; margin-left: 20px; margin-right: 20px; background-color: #dbdbdb; height: 1px;"></div>
+
+    <div class="karte none">
+        <div class="titel-1 link2" onclick='weiterleiten("über-uns.html")' style="cursor: pointer;" 
+            ><span style="width: 100%; white-space: nowrap;" >
+                Über uns
+            </span></div>
+    </div>
+    
+</div>
+
+</div>
+
+<div class="main">
+
+
+<div class="navigation" style="display: block; overflow: hidden;">
+    <span>Steuern Erklärt</span>
+</div>
+
+<div class="scroll">
+
+
+
+
+<div class="karten-abstand-1"></div>
+
+<div class="karten-überschrift-0">Steuern Erklärt
+</div>
+
+
+
+
+
+<div class="karten-abstand-1"></div>
+
+
+<div class="karte">
+    <ul>
+        <div class="karten-abstand-3"></div>
+        <li>
+            <div class="titel-2"
+            ><span style="width: 100%">
+                Welche Steuern werden erhoben?
+            </span></div>
+        </li>
+
+        <div class="karten-abstand-2"></div>
+
+        <div class="text-1"><span>In den USHGU wird die <span style="font-weight: 600;">Einkommenssteuer</span> und die <span style="font-weight: 600;">Umsatzsteuer</span> vom Staat erhoben.
+        </span></div>
+
+        <div class="karten-abstand-3"></div>
+    </ul>
+</div>
+
+<div class="karten-abstand-1"></div>
+
+<div class="karte">
+    <ul>
+        <div class="karten-abstand-3"></div>
+        <li>
+            <div class="titel-2"
+            ><span style="width: 100%">
+                Einkommenssteuer
+            </span></div>
+        </li>
+
+        <div class="karten-abstand-2"></div>
+
+        <div class="text-1">Alle Arbeitnehmer und Arbeitgeber müssen eine Einkommenssteuer zahlen. Je höher der Stundenlohn, desto höher der Einkommenssteuersatz.<br><br> Bei Arbeitgebern stellt der Quotient des Gesamtgewinns des Unternehmens und der Arbeitsdauer den Stundenlohn dar.
+        </div>
+
+        <div class="karten-abstand-2"></div>
+
+        <div class="inner karte">
+                <div class="text-1"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction='infoAlert("Lorem Ipsum")'
+                data-statusfunction='infoAlert("Lorem Ipsum")'
+                data-statusid='statusid1'
+                data-booleanid='boolean-1'
+                data-booleanfunction='switchBoolean("boolean-1")'
+            ><span style="width: 100%" onclick="">
+                <span style="padding: 0px; font-size: 16px; display: flex; align-items: center;">50 <img style="height: 24px;" src="images/hb.svg"> / h</span>
+            </span><span style="white-space: nowrap;">20 %</span></div>
+            <div class="hr-1"></div>
+            <div class="text-1"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction='infoAlert("Lorem Ipsum")'
+                data-statusfunction='infoAlert("Lorem Ipsum")'
+                data-statusid='statusid1'
+                data-booleanid='boolean-1'
+                data-booleanfunction='switchBoolean("boolean-1")'
+            ><span style="width: 100%" onclick="">
+                <span style="padding: 0px; font-size: 16px; display: flex; align-items: center;">51-150 <img style="height: 24px;" src="images/hb.svg"> / h</span>
+            </span><span style="white-space: nowrap;">30 %</span></div>
+            <div class="hr-1"></div>
+            <div class="text-1"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction='infoAlert("Lorem Ipsum")'
+                data-statusfunction='infoAlert("Lorem Ipsum")'
+                data-statusid='statusid1'
+                data-booleanid='boolean-1'
+                data-booleanfunction='switchBoolean("boolean-1")'
+            ><span style="width: 100%" onclick="">
+                <span style="padding: 0px; font-size: 16px; display: flex; align-items: center;">Ab 150 <img style="height: 24px;" src="images/hb.svg"> / h</span>
+            </span><span style="white-space: nowrap;">50 %</span></div>
+        </div>
+        <div class="karten-abstand-2"></div>
+
+        <div class="text-1">Ihr Arbeitgeber zieht gleich die Einkommenssteuer von ihrem Gehalt ab. Sie als Arbeitnehmer müssen sich nicht damit Auseinandersetzen.
+        </div>
+
+        <div class="karten-abstand-1"></div>
+
+        <li>
+            <div class="titel-2"
+            ><span style="width: 100%">
+                Beispiel
+            </span></div>
+        </li>
+
+        <div class="text-1">> Stundenlohn 50 HB
+        </div>
+        <div class="text-1">> 2h Arbeit am Tag = 100 HB Bruttogehalt
+        </div>
+        <div class="text-1">> Einkommenssteuersatz bei 50 HB: 20%
+        </div>
+        <div class="text-1">> 20% von 100 HB = 20 HB Steuern
+        </div>
+        <div class="text-1">> Nettogehalt = 80 HB
+        </div>
+        <div class="karten-abstand-3"></div>
+
+        <div class="text-1">> Arbeitgeber zahlt 20 HB an den Staat und 80 HB an den Arbeitnehmer
+        </div>
+        <div class="karten-abstand-3"></div>
+
+    </ul>
+</div>
+
+<div class="karten-abstand-1"></div>
+
+<div class="karte">
+    <ul>
+        <div class="karten-abstand-3"></div>
+        <li>
+            <div class="titel-2"
+            ><span style="width: 100%">
+                Umsatzsteuer
+            </span></div>
+        </li>
+
+        <div class="karten-abstand-2"></div>
+
+        <div class="text-1">Alle Inhaber eines Betriebs müssen eine Umsatzsteuer zahlen. Der Umsatzsteuersatz beträgt 15 %.
+        </div>
+
+        <div class="karten-abstand-1"></div>
+
+        <li>
+            <div class="titel-2"
+            ><span style="width: 100%">
+                Beispiel
+            </span></div>
+        </li>
+
+        <div class="text-1">> Tagesumsatz: 1000 HB
+        </div>
+        <div class="text-1">> 15 % Umsatzsteuer = 150 HB
+        </div>
+        <div class="karten-abstand-3"></div>
+
+        <div class="text-1">> Dem Arbeitgeber bleiben 850 HB, um seine Arbeitnehmer zu bezahlen und neue Ware einzukaufen
+        </div>
+        <div class="karten-abstand-3"></div>
+
+    </ul>
+</div>
+
+
+<div class="karten-abstand-1"></div>
+
+
+<div class="karte">
+    <ul>
+        <div class="karten-abstand-3"></div>
+        <li>
+            <div class="titel-2"
+            ><span style="width: 100%">
+                Wie die Steuern zahlen?
+            </span></div>
+        </li>
+
+        <div class="karten-abstand-2"></div>
+
+        <div class="text-1">Jeden Tag müssen die Steuern gezahlt werden. Mit unserem Steuerrechner können Sie die Steuern und die Lohnabrechnungen ihrer Arbeitnehmer und ihres Unternehmens einfach und schnell berechnen. Das daraus entstehende Formular kann man dem Finanzamt übermitteln. <br><br>Die Steuern müssen dann in Person beim Finanzamt abgegeben werden.
+        </div>
+
+
+        <div class="karten-abstand-2"></div>
+
+        <div class="karte inner link" onclick='weiterleiten("steuerrechner.html")' style="cursor: pointer;">
+            <div class="text-1"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction=''
+                data-statusfunction=''
+                data-statusid=''
+                data-booleanid=''
+                data-booleanfunction=''
+            ><span style="width: 100%; color: #0278FC; cursor: pointer;" onclick='infoAlert("Lorem Ipsum")'>
+                Zum Steuerrechner
+            </span></div>
+        </div>
+
+        <div class="karten-abstand-3"></div>
+    </ul>
+</div>
+
+<div class="karten-abstand-1"></div>
+
+<div class="karte">
+    <ul>
+        <div class="karten-abstand-3"></div>
+        <li>
+            <div class="titel-2"
+            ><span style="width: 100%">
+                Hilfe
+            </span></div>
+        </li>
+
+        <div class="karten-abstand-2"></div>
+
+        <div class="text-1">Sie benötigen Hilfe? Rufen Sie bei uns an!
+        </div>
+
+        <div class="karten-abstand-1"></div>
+
+        <div class="karte inner text" style="cursor: pointer;">
+            <div class="text-1"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction=''
+                data-statusfunction=''
+                data-statusid=''
+                data-booleanid=''
+                data-booleanfunction=''
+            ><span style="width: 100%; color: #0278FC; cursor: pointer;">
+                <a style="color:#0278FC; text-decoration: none;" href="tel:+4915732467574">+49 157 32467574</a> {Timothy Klimke}
+            </span></div>
+        </div>
+
+        <div class="karten-abstand-3"></div>
+    </ul>
+</div>
+
+<div class="karten-abstand-1"></div>
+
+
+
+<div class="karten-abstand-1"></div>
+<div class="karten-abstand-1"></div>
+<div class="karten-abstand-1"></div>
+
+<div><span style="align-items: center; display: block; justify-content: center; color: #c8c8cc; font-size: 12px; text-align: center;">Powered by <span style="font-weight: 500;">TIMOTHY KLIMKE</span></span></div>
+
+<div style="display: flex; margin-top: 5px; align-items: center; justify-content: center; vertical-align: center;">
+    <a display="inline-block;" href='https://www.instagram.com/terribly.thrilled.timmy/' target="_blank"><img style="height: 24px; margin: 3px; cursor: pointer" src="images/IG_logo.svg"></a>
+    <a display="inline-block;" href='https://www.youtube.com/@pandatimmymrt1635' target="_blank"><img style="height: 24px; margin: 3px; cursor: pointer" src="images/YT_logo.svg"></a>
+</div>
+
+<div class="karten-abstand-1"></div>

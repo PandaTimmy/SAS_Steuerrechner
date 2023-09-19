@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Steuerrechner</title>
+
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!--<meta name="apple-mobile-web-app-capable" content="yes">--> 
+    <meta name="theme-color" content="#f2f2f6">
+
+    <script src="js/js.js"></script>
+    <script src="js/steuerrechner.js"></script>
+    <script src="js/html2canvas.js"></script>
+   
+</head>
+
+
+<body style="display: flex;">
+
+<div class="topline" style="z-index: 999999; min-width: 100vw; min-height: 1px; position: fixed; background-color: #dbdbdb;"></div>
+
+<img src='images/menu.svg' class="sidemenu-button" style='max-width: 28px; cursor: pointer; margin-left: 19px; margin-top: 5px; position: fixed; z-index: 3000;' onclick='openCloseSidemenu("sidemenu-1")'>
+
+
+
+<div id="sidemenu-1" class="main sidemenu">
+
+<div class="scroll static sidemenu-border">
+
+
+    <div class="karten-abstand-1"></div>
+    <div class="karten-abstand-1"></div>
+
+    <div class="karten-überschrift-0" style="white-space: nowrap;">Menü</div>
+
+    <div class="karten-abstand-1"></div>
+
+    <div class="karte none">
+        <div class="titel-1 link2" onclick='weiterleiten("index.html")' style="cursor: pointer;" 
+            ><span style="width: 100%; white-space: nowrap;" >
+                Home
+            </span></div>
+    </div>
+    
+    <div class="karte none">
+        <div class="titel-1 link2" onclick='weiterleiten("steuerrechner.html")' style="cursor: pointer;" 
+            ><span style="width: 100%; white-space: nowrap;" >
+                Steuerrechner
+            </span></div>
+    </div>
+
+    <div class="karte none">
+        <div class="titel-1 link2" onclick='weiterleiten("steuern-erklärt.html")' style="cursor: pointer;" 
+            ><span style="width: 100%; white-space: nowrap;" >
+                Steuern Erklärt
+            </span></div>
+    </div>
+
+    <div style="margin: 20px; margin-left: 20px; margin-right: 20px; background-color: #dbdbdb; height: 1px;"></div>
+
+    <div class="karte selected">
+        <div class="titel-1 link2" onclick='weiterleiten("steuerrechner.html")' style="cursor: pointer;" 
+            ><span style="width: 100%; white-space: nowrap;" >
+                Über uns
+            </span></div>
+    </div>
+    
+</div>
+
+</div>
+
+<div class="main">
+
+
+<div class="navigation" style="display: block; overflow: hidden;">
+    <span>Über uns</span>
+</div>
+
+<div class="scroll">
+
+
+
+
+<div class="karten-abstand-1"></div>
+
+<div class="karten-überschrift-0">Über uns
+</div>
+
+<div class="karten-abstand-1"></div>
+
+
+<div class="text-1"><div style="margin-left: 20px; margin-right: 20px;">Herzlich willkommen zum Steuerrechner für das Projekt "Schule als Staat"!
+</div></div>
+
+<div class="karten-abstand-1"></div>
+
+
+<div class="karte">
+    <ul>
+        <div class="karten-abstand-3"></div>
+        <li>
+            <div class="titel-2"
+            ><span style="width: 100%">
+                Unsere Mission
+            </span></div>
+        </li>
+
+        <div class="karten-abstand-2"></div>
+
+        <div class="text-1">Unsere Mission ist es, Schülern und Lehrern zu helfen, die Grundlagen des Steuersystems besser zu verstehen, indem wir ein einfaches und zugängliches Werkzeug zur Verfügung stellen. Mit unserem Steuerrechner können Sie die Steuern für Ihr fiktives Unternehmen im "Schule als Staat"-Projekt präzise berechnen und ein tieferes Verständnis für Finanzen und Besteuerung entwickeln.
+        </div>
+
+        <div class="karten-abstand-3"></div>
+    </ul>
+</div>
+
+<div class="karten-abstand-1"></div>
+<div class="karten-abstand-1"></div>
+
+<div class="karten-überschrift-0">Unser Team</div>
+
+<div class="text-1"><div style="margin-left: 20px; margin-right: 20px;">Unser Team besteht aus:</div></div>
+
+<div class="karten-abstand-1"></div>
+
+
+<div class="karte">
+    <ul>
+        <div class="karten-abstand-3"></div>
+        <div style="align-items: center;" class="profilecontainer">
+            <div class="PP" style="width: 200px; margin-left: auto; margin-right: auto; margin-bottom: 10px;">
+                <a href="https://www.instagram.com/terribly.thrilled.timmy/" target="_blank">
+                    <img src="images/TTT_IG_PP.png" style="border-radius: 50%; width: 100%;">
+                <div style="position: absolute;">
+                    <img class="IGLOGO" src="images/IG_Logo_HR.svg">
+                </div>
+                </a>
+                
+            </div>
+            
+            <ul style="flex: 1;min-width: 200px;">
+                <li>
+                    <div style="font-weight: 700; font-size: 24px; text-align: center;">
+                        Timothy Klimke
+                    </div>
+                </li>
+                <li style="margin-top: 5px; margin-bottom: 5px;">
+                    <div style="text-align: center; color: #8b8b92;" class="ProfileText">
+                        DESIGNER OF HUMBUCKS
+                    </div>
+                </li>
+                <li>
+                    <div style="text-align: center;" class="ProfileText">
+                        Hauptentwickler des Steuerrechners. Timothy hat die meiste Zeit in die Entwicklung des Rechners investiert und ist maßgeblich für das Projekt verantwortlich.
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </ul>
+</div>
+
+<div class="karten-abstand-3"></div>
+
+<div class="karte">
+    <ul>
+        <div class="karten-abstand-3"></div>
+        <div style="align-items: center;" class="profilecontainer">
+            <div class="PP" style="width: 200px; margin-left: auto; margin-right: auto; margin-bottom: 10px;">
+                <a href="https://www.instagram.com/tobi07xy/" target="_blank">
+                    <img src="images/TS_IG_PP.jpg" style="border-radius: 50%; width: 100%;">
+                <div style="position: absolute;">
+                    <img class="IGLOGO" src="images/IG_Logo_HR.svg">
+                </div>
+                </a>
+                
+            </div>
+            <ul style="flex: 1;min-width: 200px;">
+                <li>
+                    <div style="font-weight: 700; font-size: 24px; text-align: center;">
+                        Tobias Späth
+                    </div>
+                </li>
+                <li>
+                    <div style="text-align: center;" class="ProfileText">
+                        Tobias war zu Beginn des Projekts an der Planung beteiligt und hat wertvolle Einblicke geliefert. Obwohl er nicht aktiv an der gesamten Programmierung beteiligt war, war seine anfängliche Unterstützung entscheidend für die Richtung des Projekts.
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </ul>
+</div>
+
+
+
+
+<div class="karten-abstand-1"></div>
+<div class="karten-abstand-1"></div>
+
+<div class="karten-überschrift-0">Projektdetails</div>
+
+<div class="text-1"><div style="margin-left: 20px; margin-right: 20px;">Eine unglaubliche Leistung</div></div>
+
+<div class="karten-abstand-2"></div>
+
+<div class="karte">
+    <ul>
+        <div class="karten-abstand-2"></div>
+
+        <div class="text-1"><span>Das Projekt "Schule als Staat" und insbesondere die Entwicklung des Steuerrechners waren eine Herausforderung. In der Programmierungsphase wurden mehr als <span style="font-weight: 700;">50 Stunden</span> investiert, um sicherzustellen, dass der Steuerrechner genau und benutzerfreundlich ist. Der Code des Projekts umfasst beeindruckende <span style="font-weight: 700;">4500 Zeilen</span>, was die Komplexität und den Umfang des Projekts unterstreicht.
+        </span></div>
+
+        <div class="karten-abstand-3"></div>
+    </ul>
+</div>
+
+<div class="karten-abstand-1"></div>
+<div class="karten-abstand-1"></div>
+
+<div class="karten-überschrift-0">Kontakt</div>
+
+<div class="karten-abstand-3"></div>
+<div class="karte">
+    <ul>
+        <div class="karten-abstand-3"></div>
+        <li>
+            <div class="titel-2"
+            ><span style="width: 100%">
+                Kontaktieren Sie uns
+            </span></div>
+        </li>
+
+        <div class="karten-abstand-2"></div>
+
+        <div class="text-1">Sie benötigen Hilfe? Rufen Sie bei uns an!
+        </div>
+
+        <div class="karten-abstand-1"></div>
+
+        <div class="karte inner text" style="cursor: pointer;">
+            <div class="text-1"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction=''
+                data-statusfunction=''
+                data-statusid=''
+                data-booleanid=''
+                data-booleanfunction=''
+            ><span style="width: 100%; color: #0278FC; cursor: pointer;">
+                <a style="color:#0278FC; text-decoration: none;" href="tel:+4915732467574">+49 157 32467574</a> {Timothy Klimke}
+            </span></div>
+        </div>
+
+        <div class="karten-abstand-3"></div>
+    </ul>
+</div>
+
+
+
+
+<div class="karten-abstand-1"></div>
+<div class="karten-abstand-1"></div>
+<div class="karten-abstand-1"></div>
+
+<div><span style="align-items: center; display: block; justify-content: center; color: #c8c8cc; font-size: 12px; text-align: center;">Powered by <span style="font-weight: 500;">TIMOTHY KLIMKE</span></span></div>
+
+<div style="display: flex; margin-top: 5px; align-items: center; justify-content: center; vertical-align: center;">
+    <a display="inline-block;" href='https://www.instagram.com/terribly.thrilled.timmy/' target="_blank"><img style="height: 24px; margin: 3px; cursor: pointer" src="images/IG_logo.svg"></a>
+    <a display="inline-block;" href='https://www.youtube.com/@pandatimmymrt1635' target="_blank"><img style="height: 24px; margin: 3px; cursor: pointer" src="images/YT_logo.svg"></a>
+</div>
+
+<div class="karten-abstand-1"></div>

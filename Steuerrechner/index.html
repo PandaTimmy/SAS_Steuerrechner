@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Steuerrechner</title>
+
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!--<meta name="apple-mobile-web-app-capable" content="yes">--> 
+    <meta name="theme-color" content="#f2f2f6">
+
+    <script src="js/js.js"></script>
+    <script src="js/steuerrechner.js"></script>
+    <script src="js/html2canvas.js"></script>
+   
+</head>
+
+
+<body style="display: flex;">
+
+<div class="topline" style="z-index: 999999; min-width: 100vw; min-height: 1px; position: fixed; background-color: #dbdbdb;"></div>
+
+<img src='images/menu.svg' class="sidemenu-button" style='max-width: 28px; cursor: pointer; margin-left: 19px; margin-top: 5px; position: fixed; z-index: 3000;' onclick='openCloseSidemenu("sidemenu-1")'>
+
+
+
+<div id="sidemenu-1" class="main sidemenu">
+
+<div class="scroll static sidemenu-border">
+
+
+    <div class="karten-abstand-1"></div>
+    <div class="karten-abstand-1"></div>
+
+    <div class="karten-überschrift-0" style="white-space: nowrap;">Menü</div>
+
+    <div class="karten-abstand-1"></div>
+
+    <div class="karte selected">
+        <div class="titel-1 link2"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction=''
+                data-statusfunction=''
+                data-statusid=''
+            ><span style="width: 100%; white-space: nowrap;" onclick=''>
+                Home
+            </span></div>
+    </div>
+    
+    <div class="karte none">
+        <div class="titel-1 link2" onclick='weiterleiten("steuerrechner.html")' style="cursor: pointer;" 
+            ><span style="width: 100%; white-space: nowrap;" >
+                Steuerrechner
+            </span></div>
+    </div>
+
+    <div class="karte none">
+        <div class="titel-1 link2" onclick='weiterleiten("steuern-erklärt.html")' style="cursor: pointer;" 
+            ><span style="width: 100%; white-space: nowrap;" >
+                Steuern Erklärt
+            </span></div>
+    </div>
+
+    <div style="margin: 20px; margin-left: 20px; margin-right: 20px; background-color: #dbdbdb; height: 1px;"></div>
+
+    <div class="karte none">
+        <div class="titel-1 link2" onclick='weiterleiten("über-uns.html")' style="cursor: pointer;" 
+            ><span style="width: 100%; white-space: nowrap;" >
+                Über uns
+            </span></div>
+    </div>
+    
+</div>
+
+</div>
+
+<div class="main">
+
+
+<div class="navigation" style="display: block; overflow: hidden;">
+    <span>Home</span>
+</div>
+
+<div class="scroll">
+
+
+
+
+<div class="karten-abstand-1"></div>
+
+<div class="karten-überschrift-0">Herzlich willkommen beim Steuerrechner!
+</div>
+
+<div class="karten-abstand-1"></div>
+
+<div class="karten-text-1"></div>
+
+
+
+<div class="karten-abstand-1"></div>
+
+
+<div class="karte">
+    <ul>
+        <div class="karten-abstand-3"></div>
+        <li>
+            <div class="titel-2"
+            ><span style="width: 100%">
+                Willkommen
+            </span></div>
+        </li>
+
+        <div class="karten-abstand-2"></div>
+
+        <div class="text-1">Hier können Sie Ihre Steuern für das Schule Als Staat (SAS) Projekt berechnen. Wir bieten eine einfache Möglichkeit, die Einkommenssteuer für Angestellte und die Umsatzsteuer für Unternehmen zu ermitteln. Unser Rechner berücksichtigt automatisch die geltenden Steuersätze und ermöglicht es Ihnen, Ihre Steuerpflicht genau zu ermitteln.
+        </div>
+
+        <div class="karten-abstand-1"></div>
+
+        <div class="karte inner link" onclick='weiterleiten("steuern-erklärt.html")' style="cursor: pointer;">
+            <div class="text-1"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction=''
+                data-statusfunction=''
+                data-statusid=''
+                data-booleanid=''
+                data-booleanfunction=''
+            ><span style="width: 100%; color: #0278FC; cursor: pointer;"'>
+                Steuern erklärt
+            </span></div>
+        </div>
+
+
+        <div class="karte inner link" onclick='weiterleiten("steuerrechner.html")' style="cursor: pointer;">
+            <div class="text-1"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction=''
+                data-statusfunction=''
+                data-statusid=''
+                data-booleanid=''
+                data-booleanfunction=''
+            ><span style="width: 100%; color: #0278FC; cursor: pointer;"'>
+                Zum Steuerrechner
+            </span></div>
+        </div>
+
+        <div class="karten-abstand-3"></div>
+    </ul>
+</div>
+
+<div class="karten-abstand-1"></div>
+
+
+<div class="karte">
+    <ul>
+        <div class="karten-abstand-3"></div>
+        <li>
+            <div class="titel-2"
+            ><span style="width: 100%">
+                Hilfe
+            </span></div>
+        </li>
+
+        <div class="karten-abstand-2"></div>
+
+        <div class="text-1">Sie benötigen Hilfe? Rufen Sie bei uns an!
+        </div>
+
+        <div class="karten-abstand-1"></div>
+
+        <div class="karte inner text" style="cursor: pointer;">
+            <div class="text-1"
+                data-linkfunction=''
+                data-infofunction=''
+                data-infotextfunction=''
+                data-dropdownfunction=''
+                data-removefunction=''
+                data-statusfunction=''
+                data-statusid=''
+                data-booleanid=''
+                data-booleanfunction=''
+            ><span style="width: 100%; color: #0278FC; cursor: pointer;">
+                <a style="color:#0278FC; text-decoration: none;" href="tel:+4915732467574">+49 157 32467574</a> {Timothy Klimke}
+            </span></div>
+        </div>
+
+        <div class="karten-abstand-3"></div>
+    </ul>
+</div>
+
+
+
+
+<div class="karten-abstand-1"></div>
+<div class="karten-abstand-1"></div>
+<div class="karten-abstand-1"></div>
+
+<div><span style="align-items: center; display: block; justify-content: center; color: #c8c8cc; font-size: 12px; text-align: center;">Powered by <span style="font-weight: 500;">TIMOTHY KLIMKE</span></span></div>
+
+<div style="display: flex; margin-top: 5px; align-items: center; justify-content: center; vertical-align: center;">
+    <a display="inline-block;" href='https://www.instagram.com/terribly.thrilled.timmy/' target="_blank"><img style="height: 24px; margin: 3px; cursor: pointer" src="images/IG_logo.svg"></a>
+    <a display="inline-block;" href='https://www.youtube.com/@pandatimmymrt1635' target="_blank"><img style="height: 24px; margin: 3px; cursor: pointer" src="images/YT_logo.svg"></a>
+</div>
+
+<div class="karten-abstand-1"></div>
